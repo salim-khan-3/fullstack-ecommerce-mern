@@ -3,17 +3,45 @@ import "./App.css";
 import Home from "./pages/Home/Home";
 import Navbar from "./Components/layouts/Navbar/Navbar";
 import Footer from "./Components/layouts/Footer/Footer";
+import { createContext, useEffect, useState } from "react";
+import axios from "axios";
+
+const MyContext = createContext();
 
 function App() {
+  const [countryList, setCountryList] = useState([]);
+
+  useEffect(() => {
+    const getCountry = async () => {
+      try {
+        const res = await axios.get(
+          "https://countriesnow.space/api/v0.1/countries/",
+        );
+        setCountryList(res.data.data || []);
+      } catch (error) {
+        console.error("Country fetch error:", error);
+      }
+    };
+
+    getCountry();
+  }, []);
+
+  const values = {
+    countryList,
+  };
   return (
     <BrowserRouter>
-      <Navbar></Navbar>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-      <Footer></Footer>
+      <MyContext.Provider value={values}>
+        <Navbar></Navbar>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+        <Footer></Footer>
+      </MyContext.Provider>
     </BrowserRouter>
   );
 }
 
 export default App;
+
+export { MyContext };
