@@ -10,6 +10,7 @@ const MyContext = createContext();
 
 function App() {
   const [countryList, setCountryList] = useState([]);
+  const [selectedCountry,setSelectedCountry] = useState("")
 
   useEffect(() => {
     const getCountry = async () => {
@@ -28,6 +29,8 @@ function App() {
 
   const values = {
     countryList,
+    selectedCountry,
+    setSelectedCountry
   };
   return (
     <BrowserRouter>

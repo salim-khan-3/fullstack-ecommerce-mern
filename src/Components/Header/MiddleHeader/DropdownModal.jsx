@@ -4,11 +4,12 @@ import { ChevronDown, Search, X } from "lucide-react";
 
 const DropdownModal = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedCountry, setSelectedCountry] = useState("Georgia");
-  const { countryList } = useContext(MyContext);
+  // const [selectedCountry, setSelectedCountry] = useState("Georgia");
+  const { countryList, selectedCountry, setSelectedCountry } =
+    useContext(MyContext);
 
   const [filteredList, setFilteredList] = useState([]);
-  
+
   useEffect(() => {
     setFilteredList(countryList);
   }, [countryList, isOpen]);
@@ -27,7 +28,6 @@ const DropdownModal = () => {
     }
   };
 
-
   return (
     <div>
       <button
@@ -38,8 +38,12 @@ const DropdownModal = () => {
           <span className="block text-[10px] text-gray-500 uppercase font-extrabold tracking-widest mb-0.5">
             Your Location
           </span>
-          <span className="text-blue-700 font-bold text-base truncate max-w-[150px]">
-            {selectedCountry}
+          <span
+            className={`font-bold text-base truncate max-w-[150px] ${
+              selectedCountry ? "text-blue-700" : "text-gray-400"
+            }`}
+          >
+            {selectedCountry || "Select Location"}
           </span>
         </div>
 

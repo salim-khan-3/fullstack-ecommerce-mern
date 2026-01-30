@@ -1,5 +1,6 @@
 import { Search, ShoppingBag, User } from "lucide-react";
 import DropdownModal from "./DropdownModal";
+import Logo from "../../layouts/Logo/Logo";
 
 const MiddleHeader = () => {
   return (
@@ -7,11 +8,7 @@ const MiddleHeader = () => {
       <div className="container mx-auto px-4 py-6 flex items-center justify-between gap-5">
         {/* first section  */}
         <div className="flex items-center justify-between gap-8">
-          <div className="">
-            <h1 className="text-3xl font-black text-blue-700 uppercase italic tracking-tighter">
-              bacola
-            </h1>
-          </div>
+          <Logo></Logo>
           {/* DropdownModal ekhon Logo-r pashe thakbe */}
           <div className="hidden lg:block">
             <DropdownModal />
