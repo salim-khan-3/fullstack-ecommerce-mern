@@ -106,7 +106,7 @@ const CategoryNavigation = () => {
 
           {/* ক্যাটাগরি প্যানেল (ক্লিক করলে ওপেন হবে) */}
           {isSidebarOpen && (
-            <div className="absolute top-[100%] left-0 flex bg-white border border-gray-100 shadow-2xl rounded-b-xl overflow-hidden mt-1 animate-in fade-in slide-in-from-top-2 duration-200">
+            <div className="absolute top-[100%] z-50 left-0 flex bg-white border border-gray-100 shadow-2xl rounded-b-xl overflow-hidden mt-1 animate-in fade-in slide-in-from-top-2 duration-200">
               {/* বাম পাশ: মেইন ক্যাটাগরি (এখানে হোভার লজিক) */}
               <ul className="w-[260px] border-r border-gray-100 py-2">
                 {categories.map((item, index) => (

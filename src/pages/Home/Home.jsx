@@ -1,6 +1,7 @@
 import React from "react";
 import Banner from "../../Components/Home/Banner/Banner";
 import CategorySideNav from "../../Components/Home/sideNav/CategorySideNav ";
+import BestSellers from "./BestSellers/BestSellers";
 
 const Home = () => {
   return (
@@ -12,7 +13,9 @@ const Home = () => {
         <div className="col-span-3">
             <Banner></Banner>
         </div>
+
       </div>
+        <BestSellers></BestSellers>
     </div>
   );
 };
