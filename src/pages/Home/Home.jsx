@@ -2,6 +2,8 @@ import React from "react";
 import Banner from "../../Components/Home/Banner/Banner";
 import CategorySideNav from "../../Components/Home/sideNav/CategorySideNav ";
 import BestSellers from "./BestSellers/BestSellers";
+import FeaturedCategories from "./FeaturedCategories/FeaturedCategories";
+import NewProducts from "./NewProducts/NewProducts";
 
 const Home = () => {
   return (
@@ -15,7 +17,11 @@ const Home = () => {
         </div>
 
       </div>
+      <FeaturedCategories></FeaturedCategories>
+
         <BestSellers></BestSellers>
+
+        <NewProducts></NewProducts>
     </div>
   );
 };
