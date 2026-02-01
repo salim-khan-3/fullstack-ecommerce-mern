@@ -70,10 +70,10 @@ const BestSellers = () => {
   );
 
   return (
-    <div className="container mx-auto px-4 py-10">
+    <div className="container mx-auto py-10">
       <div className="flex flex-col lg:flex-row gap-6">
         {/* Left Side Banner */}
-        <div className="w-full lg:w-[280px] bg-[#fcd34d] h-[550px] rounded-2xl p-8 relative overflow-hidden flex flex-col shrink-0 shadow-sm">
+        <div className="w-[375px] min-w-[375px] lg:w-[280px] bg-[#fcd34d] h-[550px] rounded-2xl p-8 relative overflow-hidden flex flex-col shrink-0 shadow-sm">
           <p className="text-[#8b5e3c] font-medium text-sm">
             Bacola Natural Foods
           </p>
