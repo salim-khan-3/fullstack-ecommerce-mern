@@ -87,7 +87,7 @@ const CategoryNavigation = () => {
     "px-5 py-2.5 text-[13px] text-gray-600 hover:bg-gray-50 hover:text-[#2bbef9] block transition-colors border-b border-gray-50 last:border-0";
 
   return (
-    <div className="w-full bg-white border-b border-gray-100 shadow-sm z-50">
+    <div className="sticky top-0 z-[60] w-full bg-white border-b border-gray-100 shadow-sm">
       <div className="container mx-auto px-4 flex items-center justify-between gap-24 ">
         {/* 1. All Categories Button Logic */}
         {/* মেইন ক্যাটাগরি বাটন */}
@@ -106,7 +106,7 @@ const CategoryNavigation = () => {
 
           {/* ক্যাটাগরি প্যানেল (ক্লিক করলে ওপেন হবে) */}
           {isSidebarOpen && (
-            <div className="absolute top-[100%] z-50 left-0 flex bg-white border border-gray-100 shadow-2xl rounded-b-xl overflow-hidden mt-1 animate-in fade-in slide-in-from-top-2 duration-200">
+            <div className="absolute top-[100%] z-50 left-0 flex bg-white border border-gray-100 shadow-2xl rounded-b-xl mt-1 animate-in fade-in slide-in-from-top-2 duration-200">
               {/* বাম পাশ: মেইন ক্যাটাগরি (এখানে হোভার লজিক) */}
               <ul className="w-[260px] border-r border-gray-100 py-2">
                 {categories.map((item, index) => (

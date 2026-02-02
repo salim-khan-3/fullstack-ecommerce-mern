@@ -1,30 +1,47 @@
 import React from "react";
-import Banner from "../../Components/Home/Banner/Banner";
-import CategorySideNav from "../../Components/Home/sideNav/CategorySideNav ";
-import BestSellers from "./BestSellers/BestSellers";
+import Banner from "./Banner/Banner";
+import CategorySideNav from "./sideNav/CategorySideNav ";
 import FeaturedCategories from "./FeaturedCategories/FeaturedCategories";
-import NewProducts from "./NewProducts/NewProducts";
 import PromoSection from "./PromoSection/PromoSection";
+import LeftBanner from "./LeftBanner/LeftBanner";
+import BestSeller from "./BestSeller/BestSeller";
+import NewProduct from "./NewProduct/NewProduct";
+import NewsletterSection from "./NewsletterSection/NewsletterSection";
+import Newsletter from "./NewsletterSection/NewsletterSection";
 
 const Home = () => {
   return (
-    <div className="container px-4 mx-auto">
-      <div className="grid grid-cols-4">
+    <div className="">
+      <div className="grid container mx-auto px-4 grid-cols-4">
         <aside className="z-5">
-            <CategorySideNav></CategorySideNav>
+          <CategorySideNav></CategorySideNav>
         </aside>
         <div className="col-span-3">
-            <Banner></Banner>
+          <Banner></Banner>
         </div>
-
       </div>
       <FeaturedCategories></FeaturedCategories>
 
-        <BestSellers></BestSellers>
+      <section>
+        <div className="container mx-auto py-10">
+          <div className="grid grid-cols-4 gap-10 items-start">
+            {/* Left Side Banner */}
+            <LeftBanner></LeftBanner>
 
-        <NewProducts></NewProducts>
+            {/* Right Side Content */}
+            <div className="col-span-3">
+              <BestSeller></BestSeller>
+              <NewProduct></NewProduct>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <PromoSection></PromoSection>
+      <PromoSection></PromoSection>
+
+      <section>
+        <Newsletter></Newsletter>
+      </section>
     </div>
   );
 };
