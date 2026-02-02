@@ -16,13 +16,11 @@ const NewProducts = () => {
 
   return (
     <div className="container mx-auto py-10 px-4">
-      <div className="flex flex-col lg:flex-row gap-6">
+      <div className="flex flex-col lg:flex-row gap-8">
         
-        {/* Left Side Banner - Fixed Width 375px */}
-        <div className="w-[375px] min-w-[375px] bg-[#fcd34d]  h-[550px] rounded-2xl p-8 relative overflow-hidden flex flex-col shrink-0 shadow-sm hidden lg:flex">
-          <p className="text-[#8b5e3c] font-medium text-sm">
-            Bacola Natural Foods
-          </p>
+        {/* Left Side Banner */}
+        <div className="w-[375px] min-w-[375px]  bg-[#fcd34d] h-[550px] rounded-2xl p-8 relative overflow-hidden flex flex-col shrink-0 shadow-sm hidden lg:flex">
+          <p className="text-[#8b5e3c] font-medium text-sm">Bacola Natural Foods</p>
           <h2 className="text-3xl font-extrabold text-[#202435] mt-2 leading-tight">
             Special Organic <br />
             <span className="font-light">Roats Burger</span>
@@ -31,7 +29,7 @@ const NewProducts = () => {
             <p className="text-gray-600 text-xs">only-from</p>
             <p className="text-[#ed174a] text-3xl font-black">$14.99</p>
           </div>
-          <div className="mt-auto relative  z-10">
+          <div className="mt-auto relative z-10">
             <img
               src="https://i.ibb.co/L5Xv6hB/burger-promo.png"
               alt="burger"
@@ -40,10 +38,10 @@ const NewProducts = () => {
           </div>
         </div>
 
-        {/* Right Side Content - Grid Layout */}
+        {/* Right Side Content */}
         <div className="flex-grow">
           {/* Header Section */}
-          <div className="flex justify-between items-end mb-6 border-b border-gray-100 pb-4">
+          <div className="flex justify-between items-end mb-8 border-b border-gray-100 pb-4">
             <div>
               <h3 className="text-xl font-bold text-gray-900 uppercase tracking-tight">
                 NEW PRODUCTS
@@ -59,12 +57,12 @@ const NewProducts = () => {
             </button>
           </div>
 
-          {/* Product Grid - No Slider */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 border-l border-t border-gray-100 rounded-lg overflow-hidden">
+          {/* Product Grid - Gap property added here */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-6">
             {products.map((product) => (
               <div
                 key={product.id}
-                className="group/card gap-4 relative p-5 border-r border-b border-gray-100 bg-white hover:shadow-2xl hover:z-20 transition-all duration-300 cursor-pointer flex flex-col h-full"
+                className="group/card relative p-5 bg-white border border-gray-100 rounded-2xl hover:shadow-xl hover:border-blue-100 transition-all duration-300 flex flex-col h-full"
               >
                 {/* Top Badges */}
                 <div className="absolute top-4 left-4 flex flex-col gap-1.5 z-10">
@@ -72,12 +70,12 @@ const NewProducts = () => {
                     {product.discount}
                   </span>
                   {product.recommended && (
-                    <span className="bg-[#7141b1] text-white text-[9px] uppercase font-bold px-2 py-1 rounded shadow-sm">
+                    <span className="bg-[#7141b1] text-white text-[9px] uppercase font-bold px-2 py-1 rounded shadow-sm w-fit">
                       Recommended
                     </span>
                   )}
                   {product.organic && (
-                    <span className="bg-[#e5f8ed] text-[#038e42] text-[9px] uppercase font-bold px-2 py-1 rounded shadow-sm">
+                    <span className="bg-[#e5f8ed] text-[#038e42] text-[9px] uppercase font-bold px-2 py-1 rounded shadow-sm w-fit">
                       Organic
                     </span>
                   )}
@@ -85,20 +83,20 @@ const NewProducts = () => {
 
                 {/* Hover Actions */}
                 <div className="absolute top-4 right-4 flex flex-col gap-2 opacity-0 group-hover/card:opacity-100 transform translate-x-2 group-hover/card:translate-x-0 transition-all duration-300 z-10">
-                  <button className="p-2 bg-white rounded-full shadow-md hover:bg-blue-600 hover:text-white transition-colors">
+                  <button className="p-2 bg-white rounded-full shadow-md border border-gray-50 hover:bg-blue-600 hover:text-white transition-colors">
                     <Maximize2 size={16} />
                   </button>
-                  <button className="p-2 bg-white rounded-full shadow-md hover:bg-blue-600 hover:text-white transition-colors">
+                  <button className="p-2 bg-white rounded-full shadow-md border border-gray-0 hover:bg-blue-600 hover:text-white transition-colors">
                     <Heart size={16} />
                   </button>
                 </div>
 
                 {/* Product Image */}
-                <div className="h-44 flex items-center justify-center mb-4 overflow-hidden mt-4">
+                <div className="h-40 flex items-center justify-center mb-4 mt-6">
                   <img
                     src={product.img}
                     alt={product.name}
-                    className="max-h-full transition-transform duration-500 group-hover/card:scale-110"
+                    className="max-h-full transition-transform duration-500 group-hover/card:scale-105"
                   />
                 </div>
 
@@ -124,7 +122,7 @@ const NewProducts = () => {
                 </div>
 
                 {/* Add to Cart Button */}
-                <button className="w-full bg-white border border-[#2bbef9] text-[#2bbef9] py-2 rounded-full text-xs font-bold hover:bg-[#2bbef9] hover:text-white transition-all active:scale-95 shadow-sm mt-auto">
+                <button className="w-full cursor-pointer bg-white border border-[#2bbef9] text-[#2bbef9] py-2.5 rounded-full text-xs font-bold hover:bg-[#2bbef9] hover:text-white transition-all active:scale-95 shadow-sm mt-auto">
                   Add to cart
                 </button>
               </div>

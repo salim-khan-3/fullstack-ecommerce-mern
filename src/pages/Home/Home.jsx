@@ -4,6 +4,7 @@ import CategorySideNav from "../../Components/Home/sideNav/CategorySideNav ";
 import BestSellers from "./BestSellers/BestSellers";
 import FeaturedCategories from "./FeaturedCategories/FeaturedCategories";
 import NewProducts from "./NewProducts/NewProducts";
+import PromoSection from "./PromoSection/PromoSection";
 
 const Home = () => {
   return (
@@ -22,6 +23,8 @@ const Home = () => {
         <BestSellers></BestSellers>
 
         <NewProducts></NewProducts>
+
+        <PromoSection></PromoSection>
     </div>
   );
 };
