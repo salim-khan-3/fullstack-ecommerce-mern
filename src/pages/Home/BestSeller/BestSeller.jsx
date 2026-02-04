@@ -1,10 +1,13 @@
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { Heart, Maximize2, ChevronLeft, ChevronRight } from "lucide-react";
 import pp from "../../../assets/cyber-monday-shopping-sales.jpg";
+import ProductQuickView from "../ProductQuickView/ProductQuickView";
 
 const BestSeller = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
   const products = [
     {
       id: 1,
@@ -54,6 +57,11 @@ const BestSeller = () => {
       rating: 5,
     },
   ];
+
+  const openModal = (product) => {
+    setSelectedProduct(product);
+    setIsModalOpen(true);
+  };
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, align: "start" },
@@ -111,7 +119,7 @@ const BestSeller = () => {
                   </div>
 
                   <div className="absolute top-4 right-4 flex flex-col gap-2 opacity-0 group-hover/card:opacity-100 transform translate-x-2 group-hover/card:translate-x-0 transition-all duration-300 z-10">
-                    <button className="p-2 bg-white rounded-full shadow-md hover:bg-blue-600 hover:text-white">
+                    <button  onClick={() => openModal(product)} className="p-2 bg-white rounded-full shadow-md hover:bg-blue-600 hover:text-white">
                       <Maximize2 size={16} />
                     </button>
                     <button className="p-2 bg-white rounded-full shadow-md hover:bg-blue-600 hover:text-white">
@@ -158,6 +166,12 @@ const BestSeller = () => {
         </div>
 
         {/* Side Navigation Icons (Angles) */}
+        {isModalOpen && (
+          <ProductQuickView
+            product={selectedProduct}
+            closeModal={() => setIsModalOpen(false)}
+          />
+        )}
         <button
           onClick={scrollPrev}
           className="absolute -left-5 top-1/2 -translate-y-1/2 bg-white border border-gray-200 p-3 rounded-full shadow-xl z-30 opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-blue-600 hover:text-white"
