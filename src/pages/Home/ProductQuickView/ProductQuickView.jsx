@@ -91,8 +91,7 @@ const ProductQuickView = ({ product, onClose }) => {
 
             {/* Description */}
             <p className="text-[#71778e] text-[15px] leading-relaxed">
-              Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus 
-              malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent.
+              {product.description}
             </p>
 
             {/* Actions: Quantity & Cart */}
