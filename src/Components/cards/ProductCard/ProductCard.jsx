@@ -24,10 +24,10 @@ const ProductCard = ({ product,onQuickView }) => {
 
         {/* heart and expand section  */}
         <div className="absolute top-4 right-4 flex flex-col gap-2 opacity-0 group-hover/card:opacity-100 transform translate-x-2 group-hover/card:translate-x-0 transition-all duration-300 z-10">
-          <button  onClick={onQuickView} className="p-2 bg-white rounded-full shadow-md hover:bg-blue-600 hover:text-white">
+          <button  onClick={onQuickView} className="p-2 bg-white rounded-full shadow-md hover:bg-[#2bbef9] hover:text-white">
             <Maximize2 size={16} />
           </button>
-          <button className="p-2 bg-white rounded-full shadow-md hover:bg-blue-600 hover:text-white">
+          <button className="p-2 bg-white rounded-full shadow-md hover:bg-[#2bbef9] hover:text-white">
             <Heart size={16} />
           </button>
         </div>

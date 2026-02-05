@@ -4,7 +4,7 @@ import { FaStar } from "react-icons/fa";
 import ProductImageZoom from "../ProductImageZoom/ProductImageZoom";
 
 const ProductQuickView = ({ product, onClose }) => {
-  // ডামি গ্যালারি (এখানে সরাসরি লিঙ্কও দিতে পারেন)
+
   const productGallery = [product.img, product.img, product.img];
   const [selectedImg, setSelectedImg] = useState(product.img);
   const [quantity, setQuantity] = useState(1);
@@ -46,7 +46,7 @@ const ProductQuickView = ({ product, onClose }) => {
           {/* LEFT SIDE: Image Gallery */}
           <div className="w-full md:w-[45%]">
             <div className="relative border rounded-xl overflow-hidden bg-white h-[350px] flex items-center justify-center">
-               {/* জুম কম্পোনেন্ট */}
+            
                <ProductImageZoom Image={selectedImg} />
                
                {/* Badges on Image */}

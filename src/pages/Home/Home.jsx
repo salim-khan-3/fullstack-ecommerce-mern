@@ -13,11 +13,11 @@ const Home = () => {
   return (
     <div className="">
       <div className="grid container mx-auto px-4 grid-cols-4">
-        <aside className="z-5">
-          <CategorySideNav></CategorySideNav>
+       <aside className="z-5 hidden lg:block">
+          <CategorySideNav />
         </aside>
-        <div className="col-span-3">
-          <Banner></Banner>
+        <div className="col-span-4 lg:col-span-3">
+          <Banner />
         </div>
       </div>
       <FeaturedCategories></FeaturedCategories>

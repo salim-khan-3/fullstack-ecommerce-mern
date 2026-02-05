@@ -10,7 +10,7 @@ const MyContext = createContext();
 
 function App() {
   const [countryList, setCountryList] = useState([]);
-  const [selectedCountry,setSelectedCountry] = useState("")
+  const [selectedCountry,setSelectedCountry] = useState("");
 
   useEffect(() => {
     const getCountry = async () => {
