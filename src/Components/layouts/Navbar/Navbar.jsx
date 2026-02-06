@@ -4,18 +4,14 @@ import CategoryNavigation from '../../Header/CategoryNavigation/CategoryNavigati
 
 const Navbar = () => {
   return (
-  <>
-  {/* Mobile / Tablet: whole header sticky */}
-      <div className="sticky top-0 z-50 lg:static bg-red-400">
+  <div className='sticky top-0 z-40'>
+  
         <TopStrip />
         <MiddleHeader />
-      </div>
-
-      {/* Large: only CategoryNavigation sticky */}
-      <div className="sticky top-0 z-10 bg-red-400 border-b">
+      
         <CategoryNavigation />
-      </div>
-    </>
+      
+    </div>
   );
 };
 

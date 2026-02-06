@@ -24,16 +24,22 @@ const Home = () => {
 
       <section>
         <div className="container mx-auto py-10">
-          <div className="grid grid-cols-4 gap-10 items-start">
-            {/* Left Side Banner */}
-            <LeftBanner></LeftBanner>
+ <div className="flex flex-col-reverse lg:grid lg:grid-cols-4 gap-10 items-start">
+  
+  {/* Left Side Banner (Mobile-e niche thakbe, Desktop-e bame) */}
+  <div className="w-full lg:col-span-1">
+    <LeftBanner />
+  </div>
 
-            {/* Right Side Content */}
-            <div className="col-span-3">
-              <BestSeller></BestSeller>
-              <NewProduct></NewProduct>
-            </div>
-          </div>
+  {/* Right Side Content (Mobile-e upore thakbe, Desktop-e dane) */}
+  <div className="w-full lg:col-span-3">
+    <div className="flex flex-col gap-10">
+      <BestSeller />
+      <NewProduct />
+    </div>
+  </div>
+  
+</div>
         </div>
       </section>
 
