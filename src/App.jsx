@@ -5,6 +5,7 @@ import Navbar from "./Components/layouts/Navbar/Navbar";
 import Footer from "./Components/layouts/Footer/Footer";
 import { createContext, useEffect, useState } from "react";
 import axios from "axios";
+import Listing from "./pages/Listing/Listing";
 
 const MyContext = createContext();
 
@@ -38,6 +39,7 @@ function App() {
         <Navbar></Navbar>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/listing/:id" element={<Listing />} />
         </Routes>
         <Footer></Footer>
       </MyContext.Provider>

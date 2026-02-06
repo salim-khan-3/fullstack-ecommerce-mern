@@ -28,7 +28,7 @@ const NewProduct = () => {
   });
 
   return (
-    <div className="flex-grow mb-10">
+    <div className="flex-grow mb-10 px-4 md:px-0">
       {/* Header Section */}
       <div className="flex justify-between items-end mb-8 border-b border-gray-100 pb-4">
         <div>

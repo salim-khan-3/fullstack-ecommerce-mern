@@ -149,12 +149,7 @@ const MiddleHeader = () => {
 
           {/* Sidebar Search */}
           <div className="relative mb-6">
-            <input
-              type="text"
-              placeholder="Search products..."
-              className="w-full bg-gray-50 border border-gray-100 rounded-lg py-2.5 px-4 pr-10 outline-none text-sm focus:bg-white focus:border-red-200"
-            />
-            <Search className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
+           <DropdownModal></DropdownModal>
           </div>
 
           {/* Navigation Links */}
