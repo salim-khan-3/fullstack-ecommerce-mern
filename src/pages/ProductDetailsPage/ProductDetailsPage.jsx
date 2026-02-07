@@ -6,13 +6,14 @@ import img3 from "../../assets/4685339.jpg";
 
 import ProductImageGallery from "../../Components/Shared/ProductImageGallery/ProductImageGallery";
 import QuantityCounter from "../../Components/Shared/QuantityCounter/QuantityCounter";
+import ProductTabs from "./ProductTabs/ProductTabs";
 
 const ProductDetailsPage = () => {
   const productImages = [img1, img2, img3];
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+      <div className="flex flex-col md:flex-row gap-12">
         
         {/* LEFT : Image */}
         <div className="flex justify-center lg:justify-start">
@@ -78,6 +79,10 @@ const ProductDetailsPage = () => {
             <li>✔ LIFE: 30 days</li>
           </ul>
         </div>
+      </div>
+
+      <div>
+        <ProductTabs></ProductTabs>
       </div>
     </div>
   );
