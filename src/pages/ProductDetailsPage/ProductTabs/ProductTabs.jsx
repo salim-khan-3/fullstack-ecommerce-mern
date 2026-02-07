@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ReviewSection from "../ReviewSection/ReviewSection";
 import AdditionalInfo from "../AdditionalInfo/AdditionalInfo";
+import Description from "../Description/Description";
 
 const tabs = [
   { id: "description", label: "Description" },
@@ -36,12 +37,7 @@ const ProductTabs = () => {
       {/* Tabs Content */}
       <div className="text-sm sm:text-base text-gray-600 leading-relaxed">
         {activeTab === "description" && (
-          <p>
-            Noodles & Company is an American fast-casual restaurant that
-            offers international and American noodle dishes and pasta
-            in addition to soups and salads. Founded in 1995 by Aaron
-            Kennedy and headquartered in Broomfield, Colorado.
-          </p>
+          <Description></Description>
         )}
 
         {activeTab === "additional" && (

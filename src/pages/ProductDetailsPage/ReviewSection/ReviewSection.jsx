@@ -11,12 +11,7 @@ const ReviewSection = () => {
 
   return (
     <div className="max-w-6xl mx-auto p-8 bg-white text-gray-700 font-sans">
-      {/* Tab Buttons */}
-      <div className="flex gap-4 mb-10">
-        <button className="px-6 py-2 border border-gray-300 rounded-full hover:bg-gray-50 transition">Description</button>
-        <button className="px-6 py-2 border border-gray-300 rounded-full hover:bg-gray-50 transition">Additional Info</button>
-        <button className="px-6 py-2 border border-green-100 rounded-full text-green-600 bg-green-50 font-medium">Reviews (3)</button>
-      </div>
+     
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
         
