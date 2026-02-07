@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ArrowLeftRight, Check, Heart, Minus, Plus, X } from "lucide-react";
 import { FaStar } from "react-icons/fa";
-import ProductImageZoom from "../ProductImageZoom/ProductImageZoom";
+import ProductImageZoom from "../../../Components/Shared/ProductImageZoom/ProductImageZoom";
 
 const ProductQuickView = ({ product, onClose }) => {
 
