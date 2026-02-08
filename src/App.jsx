@@ -6,7 +6,8 @@ import Footer from "./Components/layouts/Footer/Footer";
 import { createContext, useEffect, useState } from "react";
 import axios from "axios";
 import Listing from "./pages/Listing/Listing";
-import ProductDetailsPage from "./pages/ProductDetailsPage/ProductDetailsPage";
+import ProductDetailsPage from "./pages/ProductDetailsPage/ProductDetailsPage/ProductDetailsPage";
+// import ProductDetailsPage from "./pages/ProductDetailsPage/ProductDetailsPage";
 
 const MyContext = createContext();
 
