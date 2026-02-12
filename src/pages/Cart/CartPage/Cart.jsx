@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import CartTable from "../CartTable/CartTable";
 import CartSummary from "../CartSummary/CartSummary";
+import pp from "../../../assets/4685339.jpg"
 const Cart = () => {
   const [items, setItems] = useState([
     {
@@ -8,7 +9,7 @@ const Cart = () => {
       name: "Men Alias-N Regular Fit Spread...",
       price: 1500,
       quantity: 1,
-      image: "https://via.placeholder.com/60",
+      image: pp,
       rating: 4,
     },
     {
@@ -16,7 +17,7 @@ const Cart = () => {
       name: "Chikankari Woven Kurta...",
       price: 1200,
       quantity: 3,
-      image: "https://via.placeholder.com/60",
+      image: pp,
       rating: 5,
     },
     {
@@ -24,7 +25,47 @@ const Cart = () => {
       name: "POCO C61, 4GB RAM, 64GB ROM...",
       price: 20000,
       quantity: 1,
-      image: "https://via.placeholder.com/60",
+      image:pp,
+      rating: 5,
+    },
+    {
+      id: 3,
+      name: "POCO C61, 4GB RAM, 64GB ROM...",
+      price: 20000,
+      quantity: 1,
+      image:pp,
+      rating: 5,
+    },
+    {
+      id: 3,
+      name: "POCO C61, 4GB RAM, 64GB ROM...",
+      price: 20000,
+      quantity: 1,
+      image:pp,
+      rating: 5,
+    },
+    {
+      id: 3,
+      name: "POCO C61, 4GB RAM, 64GB ROM...",
+      price: 20000,
+      quantity: 1,
+      image:pp,
+      rating: 5,
+    },
+    {
+      id: 3,
+      name: "POCO C61, 4GB RAM, 64GB ROM...",
+      price: 20000,
+      quantity: 1,
+      image:pp,
+      rating: 5,
+    },
+    {
+      id: 3,
+      name: "POCO C61, 4GB RAM, 64GB ROM...",
+      price: 20000,
+      quantity: 1,
+      image:pp,
       rating: 5,
     },
   ]);

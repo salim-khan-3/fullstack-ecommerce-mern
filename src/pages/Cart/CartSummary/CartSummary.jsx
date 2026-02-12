@@ -4,7 +4,7 @@ import { ShoppingBag } from 'lucide-react';
 const CartSummary = ({ subtotal }) => {
   return (
     <div className="lg:w-1/3">
-      <div className="border border-gray-100 rounded-lg p-6 shadow-sm sticky top-6">
+      <div className="border border-gray-100 rounded-lg p-6 shadow-sm sticky top-60">
         <h2 className="text-lg font-bold text-gray-800 border-b pb-4 mb-4">CART TOTALS</h2>
         <div className="space-y-4 text-sm">
           <div className="flex justify-between items-center">
