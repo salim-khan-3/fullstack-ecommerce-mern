@@ -9,6 +9,7 @@ import Listing from "./pages/Listing/Listing";
 import ProductDetailsPage from "./pages/ProductDetailsPage/ProductDetailsPage/ProductDetailsPage";
 // <<<<<<< HEAD
 import Cart from "./pages/Cart/CartPage/Cart";
+import Login from "./pages/Login/Login";
 // =======
 // import ProductDetailsPage from "./pages/ProductDetailsPage/ProductDetailsPage";
 // >>>>>>> bccfbeb82c3a41201468644f071514eb5a85f374
@@ -18,6 +19,7 @@ const MyContext = createContext();
 function App() {
   const [countryList, setCountryList] = useState([]);
   const [selectedCountry,setSelectedCountry] = useState("");
+  const [isShowHeaderFooter,setisShowHeaderFooter] = useState(true)
 
   useEffect(() => {
     const getCountry = async () => {
@@ -37,17 +39,23 @@ function App() {
   const values = {
     countryList,
     selectedCountry,
-    setSelectedCountry
+    setSelectedCountry,
+    isShowHeaderFooter,
+    setisShowHeaderFooter,
   };
   return (
     <BrowserRouter>
       <MyContext.Provider value={values}>
-        <Navbar></Navbar>
+        {
+          isShowHeaderFooter === true && <Navbar></Navbar>
+        }
+        
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/listing/:id" element={<Listing />} />
           <Route path="/product/:id" element={<ProductDetailsPage />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/login" element={<Login></Login>}/>
         </Routes>
         <Footer></Footer>
       </MyContext.Provider>
