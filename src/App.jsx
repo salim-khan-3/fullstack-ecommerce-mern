@@ -57,7 +57,9 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<Login></Login>}/>
         </Routes>
-        <Footer></Footer>
+        {
+          isShowHeaderFooter === true && <Footer></Footer>
+        }
       </MyContext.Provider>
     </BrowserRouter>
   );
