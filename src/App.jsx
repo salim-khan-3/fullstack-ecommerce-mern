@@ -7,7 +7,11 @@ import { createContext, useEffect, useState } from "react";
 import axios from "axios";
 import Listing from "./pages/Listing/Listing";
 import ProductDetailsPage from "./pages/ProductDetailsPage/ProductDetailsPage/ProductDetailsPage";
+// <<<<<<< HEAD
 import Cart from "./pages/Cart/CartPage/Cart";
+// =======
+// import ProductDetailsPage from "./pages/ProductDetailsPage/ProductDetailsPage";
+// >>>>>>> bccfbeb82c3a41201468644f071514eb5a85f374
 
 const MyContext = createContext();
 

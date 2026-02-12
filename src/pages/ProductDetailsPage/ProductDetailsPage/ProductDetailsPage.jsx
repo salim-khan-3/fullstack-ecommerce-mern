@@ -3,7 +3,9 @@
 
 import ProductDetailCard from "../ProductDetailCard/ProductDetailCard";
 import ProductTabs from "../ProductTabs/ProductTabs";
+
 import RelatedProduct from "../RelatedProduct/RelatedProduct";
+
 
 const ProductDetailsPage = () => {
 
@@ -18,7 +20,10 @@ const ProductDetailsPage = () => {
         <ProductTabs></ProductTabs>
       </div>
 
+
       <RelatedProduct></RelatedProduct>
+
+
     </div>
   );
 };
