@@ -7,7 +7,7 @@ import { createContext, useEffect, useState } from "react";
 import axios from "axios";
 import Listing from "./pages/Listing/Listing";
 import ProductDetailsPage from "./pages/ProductDetailsPage/ProductDetailsPage/ProductDetailsPage";
-// import ProductDetailsPage from "./pages/ProductDetailsPage/ProductDetailsPage";
+import Cart from "./pages/Cart/CartPage/Cart";
 
 const MyContext = createContext();
 
@@ -43,6 +43,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/listing/:id" element={<Listing />} />
           <Route path="/product/:id" element={<ProductDetailsPage />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
         <Footer></Footer>
       </MyContext.Provider>

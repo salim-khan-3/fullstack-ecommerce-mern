@@ -69,15 +69,14 @@ const RelatedProduct = () => {
     },
   ];
 
-const [emblaRef, emblaApi] = useEmblaCarousel(
-  {
-    loop: true,
-    align: "start",
-    dragFree: true,
-  },
-  [Autoplay({ delay: 4000, stopOnInteraction: false })]
-);
-
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    {
+      loop: true,
+      align: "start",
+      dragFree: true,
+    },
+    [Autoplay({ delay: 4000, stopOnInteraction: false })],
+  );
 
   const scrollPrev = useCallback(
     () => emblaApi && emblaApi.scrollPrev(),
@@ -95,7 +94,6 @@ const [emblaRef, emblaApi] = useEmblaCarousel(
           <h3 className="text-xl font-bold text-gray-900 uppercase tracking-tight">
             RELATED PRODUCTS
           </h3>
-         
         </div>
         <button className="border border-gray-200 rounded-full px-5 py-2 text-xs font-bold text-gray-500 hover:bg-blue-600 hover:text-white transition-all shadow-sm">
           View All →
@@ -155,8 +153,3 @@ const [emblaRef, emblaApi] = useEmblaCarousel(
 };
 
 export default RelatedProduct;
-
-
-
-
-
