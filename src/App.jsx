@@ -10,6 +10,7 @@ import ProductDetailsPage from "./pages/ProductDetailsPage/ProductDetailsPage/Pr
 // <<<<<<< HEAD
 import Cart from "./pages/Cart/CartPage/Cart";
 import Login from "./pages/Login/Login";
+import SignUp from "./pages/SignUp/SignUp";
 // =======
 // import ProductDetailsPage from "./pages/ProductDetailsPage/ProductDetailsPage";
 // >>>>>>> bccfbeb82c3a41201468644f071514eb5a85f374
@@ -56,6 +57,7 @@ function App() {
           <Route path="/product/:id" element={<ProductDetailsPage />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<Login></Login>}/>
+          <Route path="/signup" element={<SignUp></SignUp>}/>
         </Routes>
         {
           isShowHeaderFooter === true && <Footer></Footer>
