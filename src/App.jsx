@@ -3,7 +3,7 @@ import "./App.css";
 import Home from "./pages/Home/Home";
 import Navbar from "./Components/layouts/Navbar/Navbar";
 import Footer from "./Components/layouts/Footer/Footer";
-import { createContext, useEffect, useState } from "react";
+import { createContext,  useEffect, useState } from "react";
 import axios from "axios";
 import Listing from "./pages/Listing/Listing";
 import ProductDetailsPage from "./pages/ProductDetailsPage/ProductDetailsPage/ProductDetailsPage";
@@ -17,7 +17,8 @@ const MyContext = createContext();
 function App() {
   const [countryList, setCountryList] = useState([]);
   const [selectedCountry,setSelectedCountry] = useState("");
-  const [isShowHeaderFooter,setisShowHeaderFooter] = useState(true)
+  const [isShowHeaderFooter,setisShowHeaderFooter] = useState(true);
+  const [isLogin,setIsLogin] = useState(false)
 
   useEffect(() => {
     const getCountry = async () => {
@@ -40,6 +41,8 @@ function App() {
     setSelectedCountry,
     isShowHeaderFooter,
     setisShowHeaderFooter,
+    isLogin,
+    setIsLogin
   };
   return (
     <BrowserRouter>
