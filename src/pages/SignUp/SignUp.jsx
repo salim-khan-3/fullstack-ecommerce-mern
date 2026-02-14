@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { MyContext } from "../../App";
 import Logo from "../../Components/layouts/Logo/Logo";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   const { setisShowHeaderFooter } = useContext(MyContext);
@@ -121,9 +122,9 @@ const SignUp = () => {
         {/* Already Registered */}
         <p className="text-center text-sm text-gray-500 mt-6">
           Already registered?{" "}
-          <a href="#" className="text-[#3b5998] font-bold hover:underline">
+          <Link to={"/login"} className="text-[#3b5998] font-bold hover:underline">
             Login
-          </a>
+          </Link>
         </p>
 
         {/* Social Login Divider */}
@@ -137,7 +138,7 @@ const SignUp = () => {
           </div>
 
           {/* Google Sign In Button */}
-          <button className="w-full flex items-center justify-center gap-3 border border-gray-300 py-3 rounded-md hover:bg-gray-50 transition-all shadow-sm active:scale-[0.98]">
+          <button className="w-full cursor-pointer flex items-center justify-center gap-3 border border-gray-300 py-3 rounded-md hover:bg-gray-50 transition-all shadow-sm active:scale-[0.98]">
             <img
               src="https://www.svgrepo.com/show/475656/google-color.svg"
               className="w-5 h-5"
