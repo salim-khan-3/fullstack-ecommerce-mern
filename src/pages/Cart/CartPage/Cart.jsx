@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CartTable from "../CartTable/CartTable";
 import CartSummary from "../CartSummary/CartSummary";
-import pp from "../../../assets/4685339.jpg"
+import pp from "../../../assets/category.jpg"
 const Cart = () => {
   const [items, setItems] = useState([
     {
